@@ -30,14 +30,15 @@ function marcarJogos(timeA, timeB, estadio, data, horario){
     fs.writeFileSync("jogos.json", jogosJSON);
 }
 
-marcarJogos("Pato Futsal", "Marreco", "Ginásio Patão", "15/05/2025", "20:00")
+marcarJogos("Seleção Brasileira","Seleção Argentina", "Arena Sorocaba", "25/08/2025", "20:00")
 
 //criarArquivo();
 
 function mostrarJogos(){
     let jogos = require("./jogos.json");
     jogos.forEach((jogo)=>{
-        console.log(jogo.timeA + " - " + jogo.timeB + " - " + jogo.estadio + " - " + jogo.data + " - " + jogo.horario + " - ")
+        console.log(jogo.timeA + " - " + jogo.timeB + " - " + jogo.estadio + " - " + jogo.data + " - " + jogo.horario)
     });
 }
 verTimes();
+mostrarJogos();
